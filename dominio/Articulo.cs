@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace dominio
 {
+    //realizo modificación para ver como se actualiza en GitHub
     public class Articulo
     {
         public string Codigo { get; set; }
