@@ -34,6 +34,7 @@ namespace winform_app
                 listaArticulo = negocio.listar();
                 dgvArticulos.DataSource = listaArticulo;
                 ocultarColumnas();
+                cargarImagen(listaArticulo[0].UrlImagen);
             }
             catch (Exception ex)
             {
@@ -47,6 +48,34 @@ namespace winform_app
             dgvArticulos.Columns["UrlImagen"].Visible = false;
             dgvArticulos.Columns["IdMarca"].Visible = false;
             dgvArticulos.Columns["IdCategoria"].Visible = false;
+        }
+
+        private void cargarImagen(string imagen)
+        {
+            try
+            {
+                pbxArticulo.Load(imagen);
+            }
+            catch (Exception ex)
+            {
+                pbxArticulo.Load("https://www.shutterstock.com/image-vector/default-ui-image-placeholder-wireframes-600nw-1037719192.jpg");                    
+            }
+        }
+
+        private void dgvArticulos_SelectionChanged(object sender, EventArgs e)
+        {
+            if(dgvArticulos.CurrentRow != null)
+            {
+                Articulo seleccionado = (Articulo)dgvArticulos.CurrentRow.DataBoundItem;
+                cargarImagen(seleccionado.UrlImagen);
+            }
+        }
+
+        private void agregarNuevoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmAgregarArticulos agregar = new frmAgregarArticulos();
+            agregar.ShowDialog();
+            cargar();
         }
     }
 }
