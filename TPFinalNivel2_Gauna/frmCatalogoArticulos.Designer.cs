@@ -35,10 +35,10 @@
             this.btnBuscar = new System.Windows.Forms.Button();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.agregarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.agregarNuevoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.modificarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.eliminarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.detalleToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.agregarNuevoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.dgvArticulos)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbxArticulo)).BeginInit();
             this.menuStrip1.SuspendLayout();
@@ -90,6 +90,7 @@
             this.btnBuscar.TabIndex = 4;
             this.btnBuscar.Text = "Buscar";
             this.btnBuscar.UseVisualStyleBackColor = true;
+            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
             // 
             // menuStrip1
             // 
@@ -112,6 +113,13 @@
             this.agregarToolStripMenuItem.Size = new System.Drawing.Size(61, 20);
             this.agregarToolStripMenuItem.Text = "Agregar";
             // 
+            // agregarNuevoToolStripMenuItem
+            // 
+            this.agregarNuevoToolStripMenuItem.Name = "agregarNuevoToolStripMenuItem";
+            this.agregarNuevoToolStripMenuItem.Size = new System.Drawing.Size(161, 22);
+            this.agregarNuevoToolStripMenuItem.Text = "Agregar nuevo...";
+            this.agregarNuevoToolStripMenuItem.Click += new System.EventHandler(this.agregarNuevoToolStripMenuItem_Click);
+            // 
             // modificarToolStripMenuItem
             // 
             this.modificarToolStripMenuItem.Name = "modificarToolStripMenuItem";
@@ -129,13 +137,6 @@
             this.detalleToolStripMenuItem.Name = "detalleToolStripMenuItem";
             this.detalleToolStripMenuItem.Size = new System.Drawing.Size(55, 20);
             this.detalleToolStripMenuItem.Text = "Detalle";
-            // 
-            // agregarNuevoToolStripMenuItem
-            // 
-            this.agregarNuevoToolStripMenuItem.Name = "agregarNuevoToolStripMenuItem";
-            this.agregarNuevoToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.agregarNuevoToolStripMenuItem.Text = "Agregar nuevo...";
-            this.agregarNuevoToolStripMenuItem.Click += new System.EventHandler(this.agregarNuevoToolStripMenuItem_Click);
             // 
             // frmCatalogoArticulos
             // 

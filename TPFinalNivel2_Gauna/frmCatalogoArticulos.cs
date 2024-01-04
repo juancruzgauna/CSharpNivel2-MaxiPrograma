@@ -77,5 +77,26 @@ namespace winform_app
             agregar.ShowDialog();
             cargar();
         }
+
+        private void btnBuscar_Click(object sender, EventArgs e)
+        {
+            List<Articulo> listaFiltrada;
+            string filtro = txtFiltro.Text;
+
+            if(filtro != "")
+            {
+                listaFiltrada = listaArticulo.FindAll(x => x.Nombre.ToUpper().Contains(filtro.ToUpper()) || x.Marca.Descripcion.ToUpper().Contains(filtro.ToUpper()));
+
+            }
+            else
+            {
+                listaFiltrada = listaArticulo;
+            }
+            
+            //se debe hacer una limpieza al Data Source antes de pasarle una nueva lista al Data Grid View
+            dgvArticulos.DataSource = null;
+            dgvArticulos.DataSource = listaFiltrada;
+            ocultarColumnas();
+        }
     }
 }
