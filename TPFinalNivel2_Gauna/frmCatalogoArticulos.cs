@@ -46,8 +46,7 @@ namespace winform_app
         private void ocultarColumnas()
         {
             dgvArticulos.Columns["UrlImagen"].Visible = false;
-            dgvArticulos.Columns["IdMarca"].Visible = false;
-            dgvArticulos.Columns["IdCategoria"].Visible = false;
+            dgvArticulos.Columns["Id"].Visible = false;
         }
 
         private void cargarImagen(string imagen)
@@ -71,13 +70,6 @@ namespace winform_app
             }
         }
 
-        private void agregarNuevoToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            frmAgregarArticulos agregar = new frmAgregarArticulos();
-            agregar.ShowDialog();
-            cargar();
-        }
-
         private void btnBuscar_Click(object sender, EventArgs e)
         {
             List<Articulo> listaFiltrada;
@@ -97,6 +89,30 @@ namespace winform_app
             dgvArticulos.DataSource = null;
             dgvArticulos.DataSource = listaFiltrada;
             ocultarColumnas();
+        }
+
+        private void btnRestablecer_Click(object sender, EventArgs e)
+        {
+            dgvArticulos.DataSource = listaArticulo;
+
+            //al hacer click en boton restablecer le devuelvo la listaArticulo a la DataGridView
+        }
+
+        private void btnAgregar_Click(object sender, EventArgs e)
+        {
+            frmAltaArticulo alta = new frmAltaArticulo();
+            alta.ShowDialog();
+            cargar();
+        }
+
+        private void btnModificar_Click(object sender, EventArgs e)
+        {
+            Articulo seleccionado;
+            seleccionado = (Articulo)dgvArticulos.CurrentRow.DataBoundItem;
+
+            frmAltaArticulo modificar = new frmAltaArticulo(seleccionado);
+            modificar.ShowDialog();
+            cargar();
         }
     }
 }
