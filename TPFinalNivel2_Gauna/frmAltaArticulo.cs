@@ -52,6 +52,7 @@ namespace winform_app
                     cboCategoria.SelectedValue = articulo.Categoria.Id;
                     cboMarca.SelectedValue = articulo.Marca.Id;
                     txtUrlImagen.Text = articulo.UrlImagen;
+                    cargarImagen(articulo.UrlImagen);
                 }
             }
             catch (Exception ex)
@@ -102,6 +103,23 @@ namespace winform_app
 
                 MessageBox.Show(ex.ToString());
             }
+        }
+        
+        private void cargarImagen(string imagen)
+        {
+            try
+            {
+                pbxAltaArticulo.Load(imagen);
+            }
+            catch (Exception ex)
+            {
+
+                pbxAltaArticulo.Load("https://www.shutterstock.com/image-vector/default-ui-image-placeholder-wireframes-600nw-1037719192.jpg");
+            }
+        }
+        private void txtUrlImagen_Leave(object sender, EventArgs e)
+        {
+            cargarImagen(txtUrlImagen.Text);
         }
     }
 }
