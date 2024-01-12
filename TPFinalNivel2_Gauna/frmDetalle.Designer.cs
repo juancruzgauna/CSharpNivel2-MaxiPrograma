@@ -42,7 +42,10 @@
             this.lblCategoriaMostrar = new System.Windows.Forms.Label();
             this.lblMarcaMostrar = new System.Windows.Forms.Label();
             this.btnSalir = new System.Windows.Forms.Button();
+            this.statusStrip1 = new System.Windows.Forms.StatusStrip();
+            this.toolStripStatusDetalle = new System.Windows.Forms.ToolStripStatusLabel();
             ((System.ComponentModel.ISupportInitialize)(this.pbxArticuloDetalle)).BeginInit();
+            this.statusStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // pbxArticuloDetalle
@@ -166,11 +169,28 @@
             this.btnSalir.UseVisualStyleBackColor = true;
             this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
             // 
+            // statusStrip1
+            // 
+            this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripStatusDetalle});
+            this.statusStrip1.Location = new System.Drawing.Point(0, 428);
+            this.statusStrip1.Name = "statusStrip1";
+            this.statusStrip1.Size = new System.Drawing.Size(590, 22);
+            this.statusStrip1.TabIndex = 40;
+            this.statusStrip1.Text = "statusStrip1";
+            // 
+            // toolStripStatusDetalle
+            // 
+            this.toolStripStatusDetalle.Name = "toolStripStatusDetalle";
+            this.toolStripStatusDetalle.Size = new System.Drawing.Size(144, 17);
+            this.toolStripStatusDetalle.Text = "Viendo detalle del artículo";
+            // 
             // frmDetalle
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(590, 450);
+            this.Controls.Add(this.statusStrip1);
             this.Controls.Add(this.btnSalir);
             this.Controls.Add(this.lblMarcaMostrar);
             this.Controls.Add(this.lblCategoriaMostrar);
@@ -190,6 +210,8 @@
             this.Text = "Detalle del Artículo";
             this.Load += new System.EventHandler(this.frmDetalle_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pbxArticuloDetalle)).EndInit();
+            this.statusStrip1.ResumeLayout(false);
+            this.statusStrip1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -211,5 +233,7 @@
         private System.Windows.Forms.Label lblCategoriaMostrar;
         private System.Windows.Forms.Label lblMarcaMostrar;
         private System.Windows.Forms.Button btnSalir;
+        private System.Windows.Forms.StatusStrip statusStrip1;
+        private System.Windows.Forms.ToolStripStatusLabel toolStripStatusDetalle;
     }
 }

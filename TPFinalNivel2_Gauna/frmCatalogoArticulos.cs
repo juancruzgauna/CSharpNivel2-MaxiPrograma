@@ -23,6 +23,9 @@ namespace winform_app
         private void frmCatalogoArticulos_Load(object sender, EventArgs e)
         {
             cargar();
+            cboCampo.Items.Add("Número");
+            cboCampo.Items.Add("Nombre");
+            cboCampo.Items.Add("Descripción");
         }
 
         private void cargar()
@@ -115,6 +118,7 @@ namespace winform_app
             cargar();
         }
 
+
         private void btnEliminar_Click(object sender, EventArgs e)
         {
             eliminar();
@@ -147,11 +151,35 @@ namespace winform_app
         private void btnDetalle_Click(object sender, EventArgs e)
         {
             Articulo seleccionado;
-            seleccionado = (Articulo)dgvArticulos.CurrentRow.DataBoundItem;
             
+            //Pongo la dgv en null ya que si hago un filtro de búsqueda y aprieto detalle
+            //me salta una excepción por el hecho de que la Current Row de ese objeto está nula
+            //(cambia el Index Change), luego le paso la lista de artículos de nuevo para actualizarla
+            dgvArticulos.DataSource = null;
+            dgvArticulos.DataSource = listaArticulo;
+            seleccionado = (Articulo)dgvArticulos.CurrentRow.DataBoundItem;
+
             frmDetalle detalle = new frmDetalle(seleccionado);
             detalle.ShowDialog();
-            cargar();
+            cargar();   
+        }
+
+        private void txtFiltro_TextChanged(object sender, EventArgs e)
+        {
+            List<Articulo> listaFiltrada;
+            string filtro = txtFiltro.Text;
+
+            if(filtro.Length >= 3)
+            {
+                listaFiltrada = listaArticulo.FindAll(x => x.Nombre.ToUpper().Contains(filtro.ToUpper()) || x.Marca.Descripcion.ToUpper().Contains(filtro.ToUpper()));
+            }
+            else
+            {
+                listaFiltrada = listaArticulo;
+            }
+            dgvArticulos.DataSource = null;
+            dgvArticulos.DataSource = listaFiltrada;
+            ocultarColumnas();
         }
     }
 }

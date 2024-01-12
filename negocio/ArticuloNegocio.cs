@@ -33,7 +33,8 @@ namespace negocio
                     aux.Categoria = new Categoria();
                     aux.Categoria.Id = (int)datos.Lector["IdCategoria"];
                     aux.Categoria.Descripcion = (string)datos.Lector["Categoria"];
-                    aux.UrlImagen = (string)datos.Lector["ImagenUrl"];
+                    if (!(datos.Lector["ImagenUrl"] is DBNull))
+                        aux.UrlImagen = (string)datos.Lector["ImagenUrl"];
 
                     lista.Add(aux);
                 }
@@ -129,5 +130,10 @@ namespace negocio
                 throw ex;
             }
         }
+
+        //public List<Articulo> filtrar(string campo, string criterio, string filtro)
+        //{
+
+        //}
     }
 }
