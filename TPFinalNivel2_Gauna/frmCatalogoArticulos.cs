@@ -99,7 +99,7 @@ namespace winform_app
         //BOTÓN BUSCAR DEL FILTRO RÁPIDO ELIMINADO
 
         private void btnRestablecer_Click(object sender, EventArgs e)
-        {
+        {          
             dgvArticulos.DataSource = listaArticulo;
             txtFiltro.Text = "";
 
@@ -310,6 +310,12 @@ namespace winform_app
             {
                 listaFiltrada = listaArticulo;
             }
+        }
+
+        private void créditosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmCreditos creditos = new frmCreditos();
+            creditos.ShowDialog();
         }
     }
 }

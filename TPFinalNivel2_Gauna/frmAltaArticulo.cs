@@ -21,6 +21,7 @@ namespace winform_app
         public frmAltaArticulo()
         {
             InitializeComponent();
+            lblAgregarArticulo.Text = "Agregar artículo";
         }
 
         //sobrecargo el constructor del formulario de alta si quiero hacer una modificación
@@ -30,6 +31,7 @@ namespace winform_app
             InitializeComponent();
             this.articulo = articulo;
             Text = "Modificar artículo";
+            lblAgregarArticulo.Text = "Modificar artículo: " + articulo.Nombre;
         }
 
         private void frmAltaArticulo_Load(object sender, EventArgs e)
