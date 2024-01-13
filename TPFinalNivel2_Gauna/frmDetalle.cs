@@ -23,6 +23,7 @@ namespace winform_app
 
         private void frmDetalle_Load(object sender, EventArgs e)
         {
+            lblSeMuestraArticulo.Text = articulo.Nombre;
             lblCodigoMostrar.Text = articulo.Codigo;
             lblNombreMostrar.Text = articulo.Nombre;
             lblDescripcionMostrar.Text = articulo.Descripcion;

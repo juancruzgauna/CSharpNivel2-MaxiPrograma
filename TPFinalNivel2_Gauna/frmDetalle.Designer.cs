@@ -44,6 +44,8 @@
             this.btnSalir = new System.Windows.Forms.Button();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.toolStripStatusDetalle = new System.Windows.Forms.ToolStripStatusLabel();
+            this.lblSeMuestraArticulo = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pbxArticuloDetalle)).BeginInit();
             this.statusStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -60,7 +62,7 @@
             // lblMarca
             // 
             this.lblMarca.AutoSize = true;
-            this.lblMarca.Location = new System.Drawing.Point(44, 290);
+            this.lblMarca.Location = new System.Drawing.Point(37, 339);
             this.lblMarca.Name = "lblMarca";
             this.lblMarca.Size = new System.Drawing.Size(40, 13);
             this.lblMarca.TabIndex = 22;
@@ -69,7 +71,7 @@
             // lblCategoria
             // 
             this.lblCategoria.AutoSize = true;
-            this.lblCategoria.Location = new System.Drawing.Point(44, 248);
+            this.lblCategoria.Location = new System.Drawing.Point(37, 297);
             this.lblCategoria.Name = "lblCategoria";
             this.lblCategoria.Size = new System.Drawing.Size(54, 13);
             this.lblCategoria.TabIndex = 21;
@@ -78,7 +80,7 @@
             // lblPrecio
             // 
             this.lblPrecio.AutoSize = true;
-            this.lblPrecio.Location = new System.Drawing.Point(44, 210);
+            this.lblPrecio.Location = new System.Drawing.Point(37, 259);
             this.lblPrecio.Name = "lblPrecio";
             this.lblPrecio.Size = new System.Drawing.Size(40, 13);
             this.lblPrecio.TabIndex = 20;
@@ -87,7 +89,7 @@
             // lblDescripcion
             // 
             this.lblDescripcion.AutoSize = true;
-            this.lblDescripcion.Location = new System.Drawing.Point(44, 168);
+            this.lblDescripcion.Location = new System.Drawing.Point(37, 217);
             this.lblDescripcion.Name = "lblDescripcion";
             this.lblDescripcion.Size = new System.Drawing.Size(66, 13);
             this.lblDescripcion.TabIndex = 19;
@@ -96,7 +98,7 @@
             // lblNombre
             // 
             this.lblNombre.AutoSize = true;
-            this.lblNombre.Location = new System.Drawing.Point(44, 126);
+            this.lblNombre.Location = new System.Drawing.Point(37, 175);
             this.lblNombre.Name = "lblNombre";
             this.lblNombre.Size = new System.Drawing.Size(47, 13);
             this.lblNombre.TabIndex = 18;
@@ -105,7 +107,7 @@
             // lblCodigo
             // 
             this.lblCodigo.AutoSize = true;
-            this.lblCodigo.Location = new System.Drawing.Point(44, 84);
+            this.lblCodigo.Location = new System.Drawing.Point(37, 133);
             this.lblCodigo.Name = "lblCodigo";
             this.lblCodigo.Size = new System.Drawing.Size(43, 13);
             this.lblCodigo.TabIndex = 17;
@@ -114,7 +116,7 @@
             // lblCodigoMostrar
             // 
             this.lblCodigoMostrar.AutoSize = true;
-            this.lblCodigoMostrar.Location = new System.Drawing.Point(116, 84);
+            this.lblCodigoMostrar.Location = new System.Drawing.Point(109, 133);
             this.lblCodigoMostrar.Name = "lblCodigoMostrar";
             this.lblCodigoMostrar.Size = new System.Drawing.Size(0, 13);
             this.lblCodigoMostrar.TabIndex = 32;
@@ -122,7 +124,7 @@
             // lblNombreMostrar
             // 
             this.lblNombreMostrar.AutoSize = true;
-            this.lblNombreMostrar.Location = new System.Drawing.Point(116, 126);
+            this.lblNombreMostrar.Location = new System.Drawing.Point(109, 175);
             this.lblNombreMostrar.Name = "lblNombreMostrar";
             this.lblNombreMostrar.Size = new System.Drawing.Size(0, 13);
             this.lblNombreMostrar.TabIndex = 33;
@@ -130,7 +132,7 @@
             // lblDescripcionMostrar
             // 
             this.lblDescripcionMostrar.AutoSize = true;
-            this.lblDescripcionMostrar.Location = new System.Drawing.Point(116, 168);
+            this.lblDescripcionMostrar.Location = new System.Drawing.Point(109, 217);
             this.lblDescripcionMostrar.Name = "lblDescripcionMostrar";
             this.lblDescripcionMostrar.Size = new System.Drawing.Size(0, 13);
             this.lblDescripcionMostrar.TabIndex = 34;
@@ -138,7 +140,7 @@
             // lblPrecioMostrar
             // 
             this.lblPrecioMostrar.AutoSize = true;
-            this.lblPrecioMostrar.Location = new System.Drawing.Point(116, 210);
+            this.lblPrecioMostrar.Location = new System.Drawing.Point(109, 259);
             this.lblPrecioMostrar.Name = "lblPrecioMostrar";
             this.lblPrecioMostrar.Size = new System.Drawing.Size(0, 13);
             this.lblPrecioMostrar.TabIndex = 35;
@@ -146,7 +148,7 @@
             // lblCategoriaMostrar
             // 
             this.lblCategoriaMostrar.AutoSize = true;
-            this.lblCategoriaMostrar.Location = new System.Drawing.Point(116, 248);
+            this.lblCategoriaMostrar.Location = new System.Drawing.Point(109, 297);
             this.lblCategoriaMostrar.Name = "lblCategoriaMostrar";
             this.lblCategoriaMostrar.Size = new System.Drawing.Size(0, 13);
             this.lblCategoriaMostrar.TabIndex = 37;
@@ -154,14 +156,14 @@
             // lblMarcaMostrar
             // 
             this.lblMarcaMostrar.AutoSize = true;
-            this.lblMarcaMostrar.Location = new System.Drawing.Point(116, 290);
+            this.lblMarcaMostrar.Location = new System.Drawing.Point(109, 339);
             this.lblMarcaMostrar.Name = "lblMarcaMostrar";
             this.lblMarcaMostrar.Size = new System.Drawing.Size(0, 13);
             this.lblMarcaMostrar.TabIndex = 38;
             // 
             // btnSalir
             // 
-            this.btnSalir.Location = new System.Drawing.Point(251, 399);
+            this.btnSalir.Location = new System.Drawing.Point(245, 389);
             this.btnSalir.Name = "btnSalir";
             this.btnSalir.Size = new System.Drawing.Size(75, 23);
             this.btnSalir.TabIndex = 39;
@@ -185,11 +187,35 @@
             this.toolStripStatusDetalle.Size = new System.Drawing.Size(144, 17);
             this.toolStripStatusDetalle.Text = "Viendo detalle del artículo";
             // 
+            // lblSeMuestraArticulo
+            // 
+            this.lblSeMuestraArticulo.AutoSize = true;
+            this.lblSeMuestraArticulo.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSeMuestraArticulo.Location = new System.Drawing.Point(171, 35);
+            this.lblSeMuestraArticulo.Name = "lblSeMuestraArticulo";
+            this.lblSeMuestraArticulo.Size = new System.Drawing.Size(78, 24);
+            this.lblSeMuestraArticulo.TabIndex = 41;
+            this.lblSeMuestraArticulo.Text = "labelcita";
+            this.lblSeMuestraArticulo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(24, 35);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(141, 24);
+            this.label1.TabIndex = 42;
+            this.label1.Text = "Viendo artículo:";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // frmDetalle
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(590, 450);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.lblSeMuestraArticulo);
             this.Controls.Add(this.statusStrip1);
             this.Controls.Add(this.btnSalir);
             this.Controls.Add(this.lblMarcaMostrar);
@@ -235,5 +261,7 @@
         private System.Windows.Forms.Button btnSalir;
         private System.Windows.Forms.StatusStrip statusStrip1;
         private System.Windows.Forms.ToolStripStatusLabel toolStripStatusDetalle;
+        private System.Windows.Forms.Label lblSeMuestraArticulo;
+        private System.Windows.Forms.Label label1;
     }
 }
