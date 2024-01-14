@@ -98,9 +98,9 @@
             this.lblCategoria.AutoSize = true;
             this.lblCategoria.Location = new System.Drawing.Point(68, 346);
             this.lblCategoria.Name = "lblCategoria";
-            this.lblCategoria.Size = new System.Drawing.Size(54, 13);
+            this.lblCategoria.Size = new System.Drawing.Size(57, 13);
             this.lblCategoria.TabIndex = 11;
-            this.lblCategoria.Text = "Categoría";
+            this.lblCategoria.Text = "Categoría:";
             // 
             // lblMarca
             // 

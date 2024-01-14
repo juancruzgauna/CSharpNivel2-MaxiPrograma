@@ -65,9 +65,9 @@
             this.lblCategoria.AutoSize = true;
             this.lblCategoria.Location = new System.Drawing.Point(57, 296);
             this.lblCategoria.Name = "lblCategoria";
-            this.lblCategoria.Size = new System.Drawing.Size(54, 13);
+            this.lblCategoria.Size = new System.Drawing.Size(57, 13);
             this.lblCategoria.TabIndex = 8;
-            this.lblCategoria.Text = "Categoría";
+            this.lblCategoria.Text = "Categoría:";
             // 
             // lblPrecio
             // 

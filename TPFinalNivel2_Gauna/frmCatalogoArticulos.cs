@@ -31,10 +31,9 @@ namespace winform_app
 
         private void cargar()
         {
-            ArticuloNegocio negocio = new ArticuloNegocio();
-
             try
             {
+                ArticuloNegocio negocio = new ArticuloNegocio();
                 listaArticulo = negocio.listar();
                 dgvArticulos.DataSource = listaArticulo;
                 ocultarColumnas();
@@ -61,13 +60,13 @@ namespace winform_app
             }
             catch (Exception ex)
             {
-                pbxArticulo.Load("https://www.shutterstock.com/image-vector/default-ui-image-placeholder-wireframes-600nw-1037719192.jpg");                    
+                pbxArticulo.Load("https://www.shutterstock.com/image-vector/default-ui-image-placeholder-wireframes-600nw-1037719192.jpg");
             }
         }
 
         private void dgvArticulos_SelectionChanged(object sender, EventArgs e)
         {
-            if(dgvArticulos.CurrentRow != null)
+            if (dgvArticulos.CurrentRow != null)
             {
                 Articulo seleccionado = (Articulo)dgvArticulos.CurrentRow.DataBoundItem;
                 cargarImagen(seleccionado.UrlImagen);
@@ -99,7 +98,7 @@ namespace winform_app
         //BOTÓN BUSCAR DEL FILTRO RÁPIDO ELIMINADO
 
         private void btnRestablecer_Click(object sender, EventArgs e)
-        {          
+        {
             dgvArticulos.DataSource = listaArticulo;
             txtFiltro.Text = "";
 
@@ -151,7 +150,7 @@ namespace winform_app
             try
             {
                 DialogResult respuesta = MessageBox.Show("¿De verdad querés eliminarlo?", "Eliminando", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
-                if(respuesta == DialogResult.Yes)
+                if (respuesta == DialogResult.Yes)
                 {
                     seleccionado = (Articulo)dgvArticulos.CurrentRow.DataBoundItem;
 
@@ -172,7 +171,7 @@ namespace winform_app
             Articulo seleccionado;
             string filtro = txtFiltro.Text;
             validarFiltroRapido(filtro);
-            
+
             try
             {
                 //Pongo la dgv en null ya que si hago un filtro de búsqueda y aprieto detalle
@@ -184,7 +183,7 @@ namespace winform_app
                 ocultarColumnas();
 
                 frmDetalle detalle = new frmDetalle(seleccionado);
-                detalle.ShowDialog();    
+                detalle.ShowDialog();
             }
             catch (Exception ex)
             {
@@ -197,7 +196,7 @@ namespace winform_app
         {
             string filtro = txtFiltro.Text;
 
-            if(filtro.Length >= 3)
+            if (filtro.Length >= 3)
             {
                 listaFiltrada = listaArticulo.FindAll(x => x.Nombre.ToUpper().Contains(filtro.ToUpper()) || x.Marca.Descripcion.ToUpper().Contains(filtro.ToUpper()));
             }
@@ -211,11 +210,11 @@ namespace winform_app
         }
 
         private void btnSalir_Click(object sender, EventArgs e)
-        {         
+        {
             DialogResult respuesta = MessageBox.Show("¿Está seguro de que desea salir?", "Saliendo de la aplicación", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
             if (respuesta == DialogResult.Yes)
             {
-               Close();
+                Close();
             }
         }
 
@@ -223,12 +222,12 @@ namespace winform_app
         {
             //SelectedIndex >= 0 tiene algo cargado
             //SelectedInex == -1 no tiene nada seleccionado
-            if(cboCampo.SelectedIndex < 0)
+            if (cboCampo.SelectedIndex < 0)
             {
                 MessageBox.Show("Por favor, seleccione el campo para filtrar.");
                 return true;
             }
-            if(cboCriterio.SelectedIndex < 0)
+            if (cboCriterio.SelectedIndex < 0)
             {
                 MessageBox.Show("Por favor, seleccione el criterio para filtrar.");
                 return true;
@@ -242,8 +241,8 @@ namespace winform_app
                 }
                 if (!(soloNumeros(txtFiltroAvanzado.Text)))
                 {
-                    MessageBox.Show("Solo números para filtrar por un campo numérico...");    
-                    return true;    
+                    MessageBox.Show("Solo números para filtrar por un campo numérico...");
+                    return true;
                 }
             }
 
@@ -256,7 +255,7 @@ namespace winform_app
             {
                 //pregunto si no es número en el if
                 if (!(char.IsNumber(caracter)))
-                    return false; 
+                    return false;
             }
             return true;
         }
@@ -282,21 +281,24 @@ namespace winform_app
 
         private void cboCampo_SelectedIndexChanged(object sender, EventArgs e)
         {
-            string opcion = cboCampo.SelectedItem.ToString();
+            if (cboCampo.SelectedItem != null)
+            {
+                string opcion = cboCampo.SelectedItem.ToString();
 
-            if (opcion == "Precio")
-            {
-                cboCriterio.Items.Clear();
-                cboCriterio.Items.Add("Mayor a");
-                cboCriterio.Items.Add("Menor a");
-                cboCriterio.Items.Add("Igual a");
-            }
-            else
-            {
-                cboCriterio.Items.Clear();
-                cboCriterio.Items.Add("Comienza con");
-                cboCriterio.Items.Add("Termina con");
-                cboCriterio.Items.Add("Contiene");
+                if (opcion == "Precio")
+                {
+                    cboCriterio.Items.Clear();
+                    cboCriterio.Items.Add("Mayor a");
+                    cboCriterio.Items.Add("Menor a");
+                    cboCriterio.Items.Add("Igual a");
+                }
+                else
+                {
+                    cboCriterio.Items.Clear();
+                    cboCriterio.Items.Add("Comienza con");
+                    cboCriterio.Items.Add("Termina con");
+                    cboCriterio.Items.Add("Contiene");
+                }
             }
         }
 
@@ -316,6 +318,16 @@ namespace winform_app
         {
             frmCreditos creditos = new frmCreditos();
             creditos.ShowDialog();
+        }
+
+        private void btnLimpiar_Click(object sender, EventArgs e)
+        {
+            cboCampo.SelectedIndex = -1;
+            cboCriterio.Items.Clear();
+            txtFiltroAvanzado.Text = "";
+            dgvArticulos.DataSource = null;
+            dgvArticulos.DataSource = listaArticulo;
+            ocultarColumnas();
         }
     }
 }
