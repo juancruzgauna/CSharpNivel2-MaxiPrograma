@@ -70,7 +70,7 @@
             this.dgvArticulos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvArticulos.Size = new System.Drawing.Size(706, 247);
             this.dgvArticulos.StandardTab = true;
-            this.dgvArticulos.TabIndex = 4;
+            this.dgvArticulos.TabIndex = 5;
             this.dgvArticulos.SelectionChanged += new System.EventHandler(this.dgvArticulos_SelectionChanged);
             // 
             // lblFiltro
@@ -113,7 +113,7 @@
             this.btnAgregar.Location = new System.Drawing.Point(33, 363);
             this.btnAgregar.Name = "btnAgregar";
             this.btnAgregar.Size = new System.Drawing.Size(75, 23);
-            this.btnAgregar.TabIndex = 5;
+            this.btnAgregar.TabIndex = 6;
             this.btnAgregar.Text = "Agregar";
             this.btnAgregar.UseVisualStyleBackColor = true;
             this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
@@ -123,7 +123,7 @@
             this.btnModificar.Location = new System.Drawing.Point(121, 363);
             this.btnModificar.Name = "btnModificar";
             this.btnModificar.Size = new System.Drawing.Size(75, 23);
-            this.btnModificar.TabIndex = 6;
+            this.btnModificar.TabIndex = 7;
             this.btnModificar.Text = "Modificar";
             this.btnModificar.UseVisualStyleBackColor = true;
             this.btnModificar.Click += new System.EventHandler(this.btnModificar_Click);
@@ -133,7 +133,7 @@
             this.btnEliminar.Location = new System.Drawing.Point(209, 363);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(75, 23);
-            this.btnEliminar.TabIndex = 7;
+            this.btnEliminar.TabIndex = 8;
             this.btnEliminar.Text = "Eliminar";
             this.btnEliminar.UseVisualStyleBackColor = true;
             this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
@@ -143,7 +143,7 @@
             this.btnDetalle.Location = new System.Drawing.Point(664, 363);
             this.btnDetalle.Name = "btnDetalle";
             this.btnDetalle.Size = new System.Drawing.Size(75, 23);
-            this.btnDetalle.TabIndex = 8;
+            this.btnDetalle.TabIndex = 9;
             this.btnDetalle.Text = "Ver Detalle";
             this.btnDetalle.UseVisualStyleBackColor = true;
             this.btnDetalle.Click += new System.EventHandler(this.btnDetalle_Click);
@@ -154,7 +154,7 @@
             this.lblCampo.Location = new System.Drawing.Point(30, 428);
             this.lblCampo.Name = "lblCampo";
             this.lblCampo.Size = new System.Drawing.Size(43, 13);
-            this.lblCampo.TabIndex = 9;
+            this.lblCampo.TabIndex = 10;
             this.lblCampo.Text = "Campo:";
             // 
             // cboCampo
@@ -164,7 +164,7 @@
             this.cboCampo.Location = new System.Drawing.Point(79, 424);
             this.cboCampo.Name = "cboCampo";
             this.cboCampo.Size = new System.Drawing.Size(121, 21);
-            this.cboCampo.TabIndex = 10;
+            this.cboCampo.TabIndex = 11;
             this.cboCampo.SelectedIndexChanged += new System.EventHandler(this.cboCampo_SelectedIndexChanged);
             // 
             // cboCriterio
@@ -174,7 +174,7 @@
             this.cboCriterio.Location = new System.Drawing.Point(288, 424);
             this.cboCriterio.Name = "cboCriterio";
             this.cboCriterio.Size = new System.Drawing.Size(121, 21);
-            this.cboCriterio.TabIndex = 12;
+            this.cboCriterio.TabIndex = 13;
             // 
             // lblCriterio
             // 
@@ -182,7 +182,7 @@
             this.lblCriterio.Location = new System.Drawing.Point(240, 428);
             this.lblCriterio.Name = "lblCriterio";
             this.lblCriterio.Size = new System.Drawing.Size(42, 13);
-            this.lblCriterio.TabIndex = 11;
+            this.lblCriterio.TabIndex = 12;
             this.lblCriterio.Text = "Criterio:";
             // 
             // lblFiltroAvanzado
@@ -191,7 +191,7 @@
             this.lblFiltroAvanzado.Location = new System.Drawing.Point(449, 428);
             this.lblFiltroAvanzado.Name = "lblFiltroAvanzado";
             this.lblFiltroAvanzado.Size = new System.Drawing.Size(32, 13);
-            this.lblFiltroAvanzado.TabIndex = 13;
+            this.lblFiltroAvanzado.TabIndex = 14;
             this.lblFiltroAvanzado.Text = "Filtro:";
             // 
             // txtFiltroAvanzado
@@ -199,14 +199,14 @@
             this.txtFiltroAvanzado.Location = new System.Drawing.Point(487, 425);
             this.txtFiltroAvanzado.Name = "txtFiltroAvanzado";
             this.txtFiltroAvanzado.Size = new System.Drawing.Size(120, 20);
-            this.txtFiltroAvanzado.TabIndex = 14;
+            this.txtFiltroAvanzado.TabIndex = 15;
             // 
             // btnFiltro
             // 
             this.btnFiltro.Location = new System.Drawing.Point(628, 424);
             this.btnFiltro.Name = "btnFiltro";
             this.btnFiltro.Size = new System.Drawing.Size(75, 23);
-            this.btnFiltro.TabIndex = 15;
+            this.btnFiltro.TabIndex = 16;
             this.btnFiltro.Text = "Buscar";
             this.btnFiltro.UseVisualStyleBackColor = true;
             this.btnFiltro.Click += new System.EventHandler(this.btnFiltro_Click);
@@ -217,7 +217,7 @@
             this.btnSalir.Location = new System.Drawing.Point(1023, 422);
             this.btnSalir.Name = "btnSalir";
             this.btnSalir.Size = new System.Drawing.Size(75, 23);
-            this.btnSalir.TabIndex = 16;
+            this.btnSalir.TabIndex = 18;
             this.btnSalir.Text = "Salir";
             this.btnSalir.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnSalir.UseVisualStyleBackColor = true;
@@ -268,7 +268,7 @@
             this.btnLimpiar.Location = new System.Drawing.Point(710, 424);
             this.btnLimpiar.Name = "btnLimpiar";
             this.btnLimpiar.Size = new System.Drawing.Size(75, 23);
-            this.btnLimpiar.TabIndex = 18;
+            this.btnLimpiar.TabIndex = 17;
             this.btnLimpiar.Text = "Limpiar";
             this.btnLimpiar.UseVisualStyleBackColor = true;
             this.btnLimpiar.Click += new System.EventHandler(this.btnLimpiar_Click);
@@ -280,7 +280,7 @@
             this.label1.Location = new System.Drawing.Point(30, 86);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(157, 18);
-            this.label1.TabIndex = 19;
+            this.label1.TabIndex = 4;
             this.label1.Text = "Listado de Artículos";
             // 
             // frmCatalogoArticulos

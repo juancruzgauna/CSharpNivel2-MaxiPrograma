@@ -16,6 +16,7 @@ namespace winform_app
     {
         private List<Articulo> listaArticulo;
         private List<Articulo> listaFiltrada;
+        private bool pasoPorElFiltroAvanzado = false;
         public frmCatalogoArticulos()
         {
             InitializeComponent();
@@ -270,7 +271,9 @@ namespace winform_app
                 string campo = cboCampo.SelectedItem.ToString();
                 string criterio = cboCriterio.SelectedItem.ToString();
                 string filtro = txtFiltroAvanzado.Text;
-                dgvArticulos.DataSource = negocio.filtrar(campo, criterio, filtro);
+                listaFiltrada = negocio.filtrar(campo, criterio, filtro);
+                dgvArticulos.DataSource = listaFiltrada;
+                pasoPorElFiltroAvanzado = true;
             }
             catch (Exception ex)
             {
@@ -308,7 +311,7 @@ namespace winform_app
             {
                 listaFiltrada = listaArticulo.FindAll(x => x.Nombre.ToUpper().Contains(filtro.ToUpper()) || x.Marca.Descripcion.ToUpper().Contains(filtro.ToUpper()));
             }
-            else
+            else if(!pasoPorElFiltroAvanzado)
             {
                 listaFiltrada = listaArticulo;
             }
