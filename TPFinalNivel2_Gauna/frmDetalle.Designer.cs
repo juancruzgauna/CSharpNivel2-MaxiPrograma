@@ -54,104 +54,116 @@
             // lblMarca
             // 
             this.lblMarca.AutoSize = true;
+            this.lblMarca.Font = new System.Drawing.Font("Microsoft Tai Le", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblMarca.Location = new System.Drawing.Point(57, 338);
             this.lblMarca.Name = "lblMarca";
-            this.lblMarca.Size = new System.Drawing.Size(40, 13);
+            this.lblMarca.Size = new System.Drawing.Size(47, 16);
             this.lblMarca.TabIndex = 10;
             this.lblMarca.Text = "Marca:";
             // 
             // lblCategoria
             // 
             this.lblCategoria.AutoSize = true;
+            this.lblCategoria.Font = new System.Drawing.Font("Microsoft Tai Le", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCategoria.Location = new System.Drawing.Point(57, 296);
             this.lblCategoria.Name = "lblCategoria";
-            this.lblCategoria.Size = new System.Drawing.Size(57, 13);
+            this.lblCategoria.Size = new System.Drawing.Size(67, 16);
             this.lblCategoria.TabIndex = 8;
             this.lblCategoria.Text = "Categoría:";
             // 
             // lblPrecio
             // 
             this.lblPrecio.AutoSize = true;
+            this.lblPrecio.Font = new System.Drawing.Font("Microsoft Tai Le", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblPrecio.Location = new System.Drawing.Point(57, 258);
             this.lblPrecio.Name = "lblPrecio";
-            this.lblPrecio.Size = new System.Drawing.Size(40, 13);
+            this.lblPrecio.Size = new System.Drawing.Size(46, 16);
             this.lblPrecio.TabIndex = 6;
             this.lblPrecio.Text = "Precio:";
             // 
             // lblDescripcion
             // 
             this.lblDescripcion.AutoSize = true;
+            this.lblDescripcion.Font = new System.Drawing.Font("Microsoft Tai Le", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDescripcion.Location = new System.Drawing.Point(57, 216);
             this.lblDescripcion.Name = "lblDescripcion";
-            this.lblDescripcion.Size = new System.Drawing.Size(66, 13);
+            this.lblDescripcion.Size = new System.Drawing.Size(78, 16);
             this.lblDescripcion.TabIndex = 4;
             this.lblDescripcion.Text = "Descripción:";
             // 
             // lblNombre
             // 
             this.lblNombre.AutoSize = true;
+            this.lblNombre.Font = new System.Drawing.Font("Microsoft Tai Le", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblNombre.Location = new System.Drawing.Point(57, 174);
             this.lblNombre.Name = "lblNombre";
-            this.lblNombre.Size = new System.Drawing.Size(47, 13);
+            this.lblNombre.Size = new System.Drawing.Size(59, 16);
             this.lblNombre.TabIndex = 2;
             this.lblNombre.Text = "Nombre:";
             // 
             // lblCodigo
             // 
             this.lblCodigo.AutoSize = true;
+            this.lblCodigo.Font = new System.Drawing.Font("Microsoft Tai Le", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCodigo.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.lblCodigo.Location = new System.Drawing.Point(57, 132);
             this.lblCodigo.Name = "lblCodigo";
-            this.lblCodigo.Size = new System.Drawing.Size(43, 13);
+            this.lblCodigo.Size = new System.Drawing.Size(53, 16);
             this.lblCodigo.TabIndex = 0;
             this.lblCodigo.Text = "Código:";
             // 
             // lblCodigoMostrar
             // 
             this.lblCodigoMostrar.AutoSize = true;
+            this.lblCodigoMostrar.Font = new System.Drawing.Font("Microsoft Tai Le", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCodigoMostrar.Location = new System.Drawing.Point(129, 132);
             this.lblCodigoMostrar.Name = "lblCodigoMostrar";
-            this.lblCodigoMostrar.Size = new System.Drawing.Size(0, 13);
+            this.lblCodigoMostrar.Size = new System.Drawing.Size(0, 16);
             this.lblCodigoMostrar.TabIndex = 1;
             // 
             // lblNombreMostrar
             // 
             this.lblNombreMostrar.AutoSize = true;
+            this.lblNombreMostrar.Font = new System.Drawing.Font("Microsoft Tai Le", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblNombreMostrar.Location = new System.Drawing.Point(129, 174);
             this.lblNombreMostrar.Name = "lblNombreMostrar";
-            this.lblNombreMostrar.Size = new System.Drawing.Size(0, 13);
+            this.lblNombreMostrar.Size = new System.Drawing.Size(0, 16);
             this.lblNombreMostrar.TabIndex = 3;
             // 
             // lblDescripcionMostrar
             // 
             this.lblDescripcionMostrar.AutoSize = true;
-            this.lblDescripcionMostrar.Location = new System.Drawing.Point(129, 216);
+            this.lblDescripcionMostrar.Font = new System.Drawing.Font("Microsoft Tai Le", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDescripcionMostrar.Location = new System.Drawing.Point(141, 216);
             this.lblDescripcionMostrar.Name = "lblDescripcionMostrar";
-            this.lblDescripcionMostrar.Size = new System.Drawing.Size(0, 13);
+            this.lblDescripcionMostrar.Size = new System.Drawing.Size(0, 16);
             this.lblDescripcionMostrar.TabIndex = 5;
             // 
             // lblPrecioMostrar
             // 
             this.lblPrecioMostrar.AutoSize = true;
+            this.lblPrecioMostrar.Font = new System.Drawing.Font("Microsoft Tai Le", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblPrecioMostrar.Location = new System.Drawing.Point(129, 258);
             this.lblPrecioMostrar.Name = "lblPrecioMostrar";
-            this.lblPrecioMostrar.Size = new System.Drawing.Size(0, 13);
+            this.lblPrecioMostrar.Size = new System.Drawing.Size(0, 16);
             this.lblPrecioMostrar.TabIndex = 7;
             // 
             // lblCategoriaMostrar
             // 
             this.lblCategoriaMostrar.AutoSize = true;
+            this.lblCategoriaMostrar.Font = new System.Drawing.Font("Microsoft Tai Le", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCategoriaMostrar.Location = new System.Drawing.Point(129, 296);
             this.lblCategoriaMostrar.Name = "lblCategoriaMostrar";
-            this.lblCategoriaMostrar.Size = new System.Drawing.Size(0, 13);
+            this.lblCategoriaMostrar.Size = new System.Drawing.Size(0, 16);
             this.lblCategoriaMostrar.TabIndex = 9;
             // 
             // lblMarcaMostrar
             // 
             this.lblMarcaMostrar.AutoSize = true;
+            this.lblMarcaMostrar.Font = new System.Drawing.Font("Microsoft Tai Le", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblMarcaMostrar.Location = new System.Drawing.Point(129, 338);
             this.lblMarcaMostrar.Name = "lblMarcaMostrar";
-            this.lblMarcaMostrar.Size = new System.Drawing.Size(0, 13);
+            this.lblMarcaMostrar.Size = new System.Drawing.Size(0, 16);
             this.lblMarcaMostrar.TabIndex = 11;
             // 
             // btnSalir
